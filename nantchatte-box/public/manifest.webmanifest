@@ -1,0 +1,19 @@
+{
+  "name": "なんちゃってBOX",
+  "short_name": "なんちゃってBOX",
+  "description": "考えずに、ポイ。なんでも投げ込んでおく箱。",
+  "start_url": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "lang": "ja",
+  "background_color": "#f4eedd",
+  "theme_color": "#f4eedd",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
