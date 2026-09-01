@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: "M PLUS Rounded 1c", "Hiragino Maru Gothic ProN", "Yu Gothic UI", sans-serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --color-cat-buy: var(--cat-buy);
+  --color-cat-buy-foreground: var(--cat-buy-foreground);
+  --color-cat-todo: var(--cat-todo);
+  --color-cat-todo-foreground: var(--cat-todo-foreground);
+  --color-cat-go: var(--cat-go);
+  --color-cat-go-foreground: var(--cat-go-foreground);
+  --color-cat-curious: var(--cat-curious);
+  --color-cat-curious-foreground: var(--cat-curious-foreground);
+  --color-cat-record: var(--cat-record);
+  --color-cat-record-foreground: var(--cat-record-foreground);
+  --color-cat-mystery: var(--cat-mystery);
+  --color-cat-mystery-foreground: var(--cat-mystery-foreground);
+}
+
+:root {
+  --background: oklch(0.96 0.02 85);
+  --foreground: oklch(0.36 0.05 45);
+  --card: oklch(0.995 0.008 90);
+  --primary: oklch(0.72 0.15 55);
+  --primary-foreground: oklch(0.99 0.005 90);
+  --secondary: oklch(0.92 0.03 80);
+  --muted: oklch(0.92 0.02 80);
+  --muted-foreground: oklch(0.55 0.04 60);
+  --accent: oklch(0.9 0.06 160);
+  --accent-foreground: oklch(0.36 0.08 160);
+  --destructive: oklch(0.6 0.2 25);
+  --destructive-foreground: oklch(0.99 0.005 90);
+  --border: oklch(0.88 0.03 75);
+  --ring: oklch(0.72 0.15 55);
+  --cat-buy: oklch(0.93 0.06 60);
+  --cat-buy-foreground: oklch(0.5 0.12 55);
+  --cat-todo: oklch(0.93 0.05 15);
+  --cat-todo-foreground: oklch(0.52 0.13 20);
+  --cat-go: oklch(0.92 0.06 165);
+  --cat-go-foreground: oklch(0.45 0.09 165);
+  --cat-curious: oklch(0.93 0.05 230);
+  --cat-curious-foreground: oklch(0.48 0.1 240);
+  --cat-record: oklch(0.94 0.06 95);
+  --cat-record-foreground: oklch(0.52 0.1 90);
+  --cat-mystery: oklch(0.93 0.02 70);
+  --cat-mystery-foreground: oklch(0.5 0.04 60);
+}
+
+* { box-sizing: border-box; border-color: var(--border); }
+html { -webkit-tap-highlight-color: transparent; }
+body { margin: 0; min-height: 100dvh; background: var(--background); color: var(--foreground); font-family: var(--font-sans); }
+button, input, textarea { font: inherit; }
+
+@keyframes toss-in { 0% { transform: translateY(-14px) rotate(-3deg) scale(.96); opacity:0 } 60% { transform: translateY(2px) rotate(1deg) scale(1.01); opacity:1 } 100% { transform:none; opacity:1 } }
+@keyframes pop { 0% { transform:scale(1) } 40% { transform:scale(.94) rotate(-2deg) } 100% { transform:scale(1) } }
+@keyframes sheet-up { from { transform:translateY(100%) } to { transform:translateY(0) } }
+@keyframes fade-in { from { opacity:0 } to { opacity:1 } }
+@keyframes wobble { 0%,100%{transform:rotate(0)} 25%{transform:rotate(-4deg)} 75%{transform:rotate(4deg)} }
+
+.animate-toss-in { animation:toss-in .4s cubic-bezier(.34,1.56,.64,1) both; }
+.animate-pop { animation:pop .35s ease both; }
+.animate-sheet-up { animation:sheet-up .3s cubic-bezier(.32,.72,0,1) both; }
+.animate-fade-in { animation:fade-in .2s ease both; }
+.animate-wobble { animation:wobble .5s ease-in-out; }
